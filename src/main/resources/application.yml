@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    appname: ribbonclient
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7171/eureka/
+server:
+  port: 9090
+spring:
+  application:
+    name: ribbonclient
+greetings:
+  ribbon:
+    listOfServers: localhost:8181,localhost:8182
+    ServerListRefreshInterval: 15000
+    eureka:
+      enabled: false # Disable Default Ping
